@@ -61,7 +61,7 @@ Q---
 -++-
 ```
 
-where **Q** denotes a queen, **-** denotes a prohibited position, and **+** denotes a possible position.
+where **[Q]** denotes a queen, **[-]** denotes a prohibited position, and **[+]** denotes a possible position.
 
 Going further, placing the second queen in the first available square reduces the search space from 6 to 1:
 
