@@ -59,7 +59,10 @@ public class NQueensSolver
 	{
 		if(col >= size)
 		{
-			// we are done, exit recursion
+			// we are done, print resulting board
+			parent.print();
+			
+			// exit recursion
 			return;
 		}
 				
@@ -71,7 +74,7 @@ public class NQueensSolver
 			{
 				b.setQueen(col, r);
 				
-				solveRecursively(b, 1);
+				solveRecursively(b, col + 1);
 			}
 		}
 	}
@@ -109,11 +112,17 @@ public class NQueensSolver
 			
 			markProhibitedPositions();
 		}
+		
+		
+		public int index(int col, int row)
+		{
+			return col * size + row;
+		}
 
 		
 		public boolean isPermitted(int col, int row)
 		{
-			int ix = col * size + row;
+			int ix = index(col, row);
 			if(ix > positions.size())
 			{
 				return false;
@@ -126,6 +135,39 @@ public class NQueensSolver
 		protected void markProhibitedPositions()
 		{
 			// TODO
+		}
+		
+		
+		public void print()
+		{
+			StringBuilder sb = new StringBuilder(size * (size + 2));
+			
+			for(int r=0; r<size; r++)
+			{
+				for(int c=0; c<size; c++)
+				{
+					if(queens[c] == r)
+					{
+						sb.append('Q');
+					}
+					else
+					{
+						int ix = index(c, r);
+						if(isPermitted(c, r))
+						{
+							sb.append('+');
+						}
+						else
+						{
+							sb.append('-');
+						}
+					}
+				}
+				
+				sb.append('\n');
+			}
+			
+			System.out.println(sb);
 		}
 	}
 }
