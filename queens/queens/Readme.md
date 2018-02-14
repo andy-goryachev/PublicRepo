@@ -35,16 +35,16 @@ the problem and ensure that this is indeed the problem to be solved.
 - find at least one or all solutions?
 - is there a limit for N (or the order of magnitude - 100? 1k? 1M?)
 Response:
-1.       Yes .. same color queens
+1. Yes .. same color queens
 	to be strict, the queens of the same color do not threaten each other, 
 	so the problem reduces to avoiding any three queens at the same line ("same angle").  
 	I **assume** that in the context of this task the rules of chess are modified such that 
 	the queens do threaten each other, right?
 		Fair enough - yes your assumption that any queen can threaten any other is correct.
-2.       Find at least one solution
-a.       Extra points: find all solutions
-b.       Extra points: only present/find “unique” solutions (cannot be rotated and/or reflected to represent another solution)
-3.       Choose a limit on N that you think suitable (as long as it is at least 8!)
+2. Find at least one solution
+   -. Extra points: find all solutions
+   -. Extra points: only present/find “unique” solutions (cannot be rotated and/or reflected to represent another solution)
+3. Choose a limit on N that you think suitable (as long as it is at least 8!)
 
 
 Design
