@@ -1,10 +1,3 @@
-2018-02-13
-****** ****
-*@*.com
-*@*.com
-
-
-
 Customer Requirements
 =====================
 Place N queens on an NxN chess board so that none of them attack each other 
@@ -36,7 +29,7 @@ the problem and ensure that this is indeed the problem to be solved.
 
 - assuming the queens are of the same color, correct?
 - find at least one or all solutions?
-- is there a limit for N (or the order of magnitude - 100? 1k? 1m?)
+- is there a limit for N (or the order of magnitude - 100? 1k? 1M?)
 Response:
 1.       Yes .. same color queens
 	to be strict, the queens of the same color do not threaten each other, 
@@ -46,7 +39,7 @@ Response:
 		Fair enough - yes your assumption that any queen can threaten any other is correct.
 2.       Find at least one solution
 a.       Extra points: find all solutions
-b.       Extra points: only present/find �unique� solutions (cannot be rotated and/or reflected to represent another solution)
+b.       Extra points: only present/find “unique” solutions (cannot be rotated and/or reflected to represent another solution)
 3.       Choose a limit on N that you think suitable (as long as it is at least 8!)
 
 
