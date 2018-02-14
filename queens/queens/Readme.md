@@ -11,13 +11,17 @@ despite not attacking each other, form a straight line at some angle
 Research
 ========
 https://en.wikipedia.org/wiki/Eight_queens_puzzle
+
 https://stackoverflow.com/questions/48448584/all-possible-n-queens
+
 http://mathworld.wolfram.com/QueensProblem.html
 
-faster:
+possibly faster:
+
 http://ieeexplore.ieee.org/document/135698/
 
-also:
+somebody was there before:
+
 https://github.com/julienschmidt/N-Queens/blob/master/src/nqueens/NQueens.java
 
 
