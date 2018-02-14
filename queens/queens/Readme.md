@@ -48,3 +48,31 @@ Design
 I am going to mark the prohibited positions on the board for each successive column, populating a BitSet at each step.
 This might offer an optimization (for large N) where the parent bitset is reused on each iteration.
 
+The marking step allows limits the number of times the code has to descent into recursion.
+
+Example:
+The very first cycle (the first queen positioned at the top left corner of the board) reduces the search space
+from 3x4=12 to 6 squares:
+ 
+```
+Q---
+--++
+-+-+
+-++-
+```
+
+where **Q** denotes a queen, **-** denotes a prohibited position, and **+** denotes a possible position.
+
+Going further, placing the second queen in the first available square reduces the search space from 6 to 1:
+
+```
+Q---
+---+
+-Q--
+----
+```
+
+As you can see the third column has no permitted squares to place the queen, therefore the corresponding 
+recursion branch will not be executed.
+
+ 
