@@ -79,4 +79,9 @@ Q---
 As you can see the third column has no permitted squares to place the queen, therefore the corresponding 
 recursion branch will not be executed.
 
- 
+
+Results
+=======
+See https://github.com/andy-goryachev/PublicRepo/tree/master/doc/queens
+
+
