@@ -21,16 +21,15 @@ public class NQueensSolver
 	
 	public NQueensSolver(int size)
 	{
+		if(size < 2)
+		{
+			throw new IllegalArgumentException();
+		}
+		
 		this.size = size;
 		
 		// TODO check for overflow
 		this.bitsetSize = size * size;
-	}
-	
-	
-	public static void main(String[] args)
-	{
-		new NQueensSolver(4).solve();
 	}
 	
 	
@@ -45,7 +44,7 @@ public class NQueensSolver
 		
 		// the first queen goes to the leftmost column, iterating from top row to the mid point
 		// (the rest is a mirror image)
-		for(int r=0; r<size; r++)
+		for(int r=0; r<midpoint; r++)
 		{
 			Board b = new Board(size, bitsetSize);
 			b.setQueen(0, r);
@@ -110,7 +109,7 @@ public class NQueensSolver
 		{
 			queens[col] = row;
 			
-			markProhibitedPositions();
+			markProhibitedPositions(col, row);
 		}
 		
 		
@@ -122,22 +121,65 @@ public class NQueensSolver
 		
 		public boolean isPermitted(int col, int row)
 		{
-			int ix = index(col, row);
-			if(ix > positions.size())
+			if(row >= size)
+			{
+				return false;
+			}
+			else if(col >= size)
 			{
 				return false;
 			}
 			
+			int ix = index(col, row);
 			return !positions.get(ix);
 		}
-
-
-		protected void markProhibitedPositions()
+		
+		
+		public void set(int col, int row)
 		{
-			// TODO
+			if(row < 0)
+			{
+				return;
+			}
+			else if(row >= size)
+			{
+				return;
+			}
+			else if(col >= size) // probably unnecessary
+			{
+				return;
+			}
+			
+			int ix = index(col, row);
+			positions.set(ix);
+		}
+
+
+		protected void markProhibitedPositions(int col, int row)
+		{
+			int d = 1;
+			
+			// standard queen attack rules: straight line, diagonals
+			for(int c=col+1; c<size; c++)
+			{
+				// straight line (sufficient to mark in one direction due to the implicit rules of the algorithm)
+				set(c, row);
+				
+				// diagonals
+				set(c, row + d);
+				set(c, row - d);
+				
+				// TODO same angle rules
+					
+				d++;
+			}
 		}
 		
 		
+		/** 
+		 * prints the board, also showing prohibited squares marked by the algorithm 
+		 * for illustration purposes.
+		 */
 		public void print()
 		{
 			StringBuilder sb = new StringBuilder(size * (size + 2));
@@ -162,6 +204,9 @@ public class NQueensSolver
 							sb.append('-');
 						}
 					}
+					
+					// attempt to fix the output aspect ratio
+					sb.append(' ');
 				}
 				
 				sb.append('\n');
