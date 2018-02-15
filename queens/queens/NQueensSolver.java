@@ -169,9 +169,42 @@ public class NQueensSolver
 				set(c, row + d);
 				set(c, row - d);
 				
-				// TODO same angle rules
-					
 				d++;
+			}
+			
+			// additional requirement: no three queens on the same line
+			// due to caching nature of the algorithm we only need to mark prohibited squares
+			// added by for the newly placed queen
+			for(int i=col-1; i>=0; i--)
+			{
+				int queenRow = queens[i];
+				
+				int dx = col - i;
+				int dy = row - queenRow;
+				
+				int x = col;
+				int y = row;
+				
+				for(;;)
+				{
+					x += dx;
+					if(x > size)
+					{
+						break;
+					}
+					
+					y += dy;
+					if(y < 0)
+					{
+						break;
+					}
+					else if(y > size)
+					{
+						break;
+					}
+					
+					set(x, y);
+				}
 			}
 		}
 		
