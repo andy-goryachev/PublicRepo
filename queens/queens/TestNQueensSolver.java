@@ -18,6 +18,11 @@ public class TestNQueensSolver
 	
 	public static void main(String[] args)
 	{
+		long start = System.currentTimeMillis();
+		
 		new NQueensSolver(8).solve();
+		
+		double elapsed = (System.currentTimeMillis() - start) / 1000.0;
+		System.out.printf("Elapsed %.2f seconds.", elapsed);
 	}
 }
