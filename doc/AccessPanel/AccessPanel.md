@@ -5,10 +5,10 @@
 ## Features
 
 * encrypted storage of credentials, keys, and local files
-* multiple terminals
+* multiple ssh terminals windows
 * powerful log viewer
 * file manager
 * VNC viewer
 * Linux management GUI similar to CPanel, Webmin
-* batch configuration tools à la Ansible
+* multi-server configuration tools à la Ansible
 * scripting notebook
