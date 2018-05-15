@@ -12,3 +12,4 @@
 * Linux management GUI similar to CPanel, Webmin
 * multi-server configuration tools à la Ansible
 * scripting notebook
+* GUI for common tasks like let's encrypt, zip and download logs, ...
