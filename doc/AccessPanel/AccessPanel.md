@@ -2,6 +2,7 @@
 
 ![alt text](screenshot.png)
 
+
 ## Features
 
 * encrypted storage of credentials, keys, and local files
@@ -9,7 +10,19 @@
 * powerful log viewer
 * file manager
 * VNC viewer
-* Linux management GUI similar to CPanel, Webmin
+* GUI for Linux components (iptables, nginx, apache, ...)
 * multi-server configuration tools à la Ansible
 * scripting notebook
 * GUI for common tasks like let's encrypt, zip and download logs, ...
+
+
+## Log Viewer
+
+![alt text](log-viewer.png)
+
+* displays local as well as remote files
+* tailing
+* search, regex
+* date queries
+* time line
+* extract and plot variables
