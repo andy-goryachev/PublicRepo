@@ -5,6 +5,7 @@
 
 ## Features
 
+* encrypted credentials, keys, temporary files
 * multiple ssh terminal windows
 * log viewer
 * vnc viewer
