@@ -1,28 +1,52 @@
 # Access Panel
 
-![alt text](screenshot.png)
+![application screenshot](terminal.png)
 
 
 ## Features
 
-* encrypted storage of credentials, keys, and local files
-* multiple ssh terminals windows
-* powerful log viewer
-* file manager
-* VNC viewer
-* GUI for Linux components (iptables, nginx, apache, ...)
-* multi-server configuration tools à la Ansible
-* scripting notebook
-* GUI for common tasks like let's encrypt, zip and download logs, ...
+* multiple ssh terminal windows
+* log viewer
+* vnc viewer
+* remote file browser
+* server control tools
+
+
+## Security
+
+* credentials, keys, local files are encrypted locally
+* temporary files are encrypted with ephemeral keys
+* configurable application window lock
+
+
+## SSH Terminals
+
+* unicode support
+* workspace remembers and restores terminal connections and layout
 
 
 ## Log Viewer
 
-![alt text](log-viewer.png)
+![log viewer](log-viewer.png)
 
-* displays local as well as remote files
+* works with local and remote files
+* timeline
 * tailing
-* search, regex
+* advanced search with regex, wildcards, and highlights 
 * date queries
-* time line
 * extract and plot variables
+
+
+
+## Server Control Tools
+
+* GUI for Linux components (iptables, nginx, apache, ...)
+* multi-server command executor with variables and scripting
+* GUI for common tasks like let's encrypt, zip and download logs, ...
+
+
+
+## Other Features
+
+* workspace remembers and reloads sessions and files
+
