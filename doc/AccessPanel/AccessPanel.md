@@ -1,8 +1,5 @@
 # Access Panel
 
-![application screenshot](terminal.png)
-
-
 ## Features
 
 * encrypted credentials, keys, temporary files
@@ -15,15 +12,18 @@
 
 ## Security
 
-* credentials, keys, local files are encrypted locally
+* credentials, keys, local files are **encrypted locally**
 * temporary files are encrypted with ephemeral keys
 * configurable application window lock
 
 
 ## SSH Terminals
 
+![application screenshot](terminal.png)
+
 * unicode support
 * workspace remembers and restores terminal connections and layout
+* multiple terminals, tabbed or in external window(s)
 
 
 ## Log Viewer
@@ -36,7 +36,15 @@
 * advanced search with regex, wildcards, and highlights 
 * date queries
 * extract and plot variables
+* aligning of multiple log files
 
+
+## VNC Viewer
+
+![vnc viewer](vnc-viewer.png)
+
+* internal tab or external window
+* remembers layout
 
 
 ## Server Control Tools
