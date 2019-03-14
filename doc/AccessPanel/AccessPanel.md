@@ -47,6 +47,14 @@
 * remembers layout
 
 
+## File Manager
+
+* local and remote filesystems
+* synchronizes directories
+* copy, rename, move directories and files
+* file preview
+
+
 ## Server Control Tools
 
 * GUI for Linux components (iptables, nginx, apache, ...)
